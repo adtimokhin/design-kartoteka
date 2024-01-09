@@ -1,4 +1,5 @@
 "use client";
+
 import DropDownOptions from "./components/DropDownOptions";
 import Input from "./components/Input";
 import NavBar from "./components/NavBar";
@@ -25,7 +26,7 @@ export default function Home() {
   };
 
   const addTag = (text) => {
-    setSelectedTags((prevTags) => [...prevTags, <Tag text={text} />]);
+    setSelectedTags((prevTags) => [...prevTags, <Tag text={text} key={`tag_${text}`}/>]);
     setSelectedTagsText((prevTags) => [...prevTags, text]);
     setTagList([]);
   };
@@ -44,7 +45,9 @@ export default function Home() {
             selectedTags={selectedTags}
           />
 
-          <MainActionButton text="View All" onClick={() => {console.log("Pressed");}} />
+          <MainActionButton text="View All" onClick={() => {
+            console.log("Pressed");}}
+             />
         </div>
 
         {tagList.length > 0 && (

@@ -19,7 +19,7 @@ const Input = ({ selectedTags, placeholder, handleInputChange }) => {
             <input
                 type="text"
                 placeholder={placeholder}
-                className="flex-grow outline-none pl-2"
+                className="flex-grow outline-none pl-2 py-1"
                 ref={inputRef}
                 onChange={handleInput}
             />
